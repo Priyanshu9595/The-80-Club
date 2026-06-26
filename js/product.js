@@ -65,6 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 
                 <div class="order-section">
+                    <h4 style="margin-bottom: 0.5rem;">Direct Order Details</h4>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label style="display:block; font-size: 0.9rem; font-weight:600; margin-bottom: 0.3rem;">Quantity</label>
+                            <input type="number" id="wa-quantity" value="1" min="1" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;">
+                        </div>
+                        <div>
+                            <label style="display:block; font-size: 0.9rem; font-weight:600; margin-bottom: 0.3rem;">Delivery Address (Location)</label>
+                            <textarea id="wa-address" placeholder="Enter your full address..." rows="2" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
+                        </div>
+                    </div>
+
                     <h4>Choose Delivery Partner</h4>
                     <div class="order-buttons">
                         <a href="https://www.swiggy.com/city/hyderabad/the-80-club-gachibowli-rest1299511" target="_blank" class="btn-order swiggy-btn">
@@ -73,14 +85,32 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="https://www.zomato.com" target="_blank" class="btn-order zomato-btn">
                             Order on Zomato
                         </a>
-                        <a href="https://wa.me/1234567890?text=${message}" target="_blank" class="btn-order whatsapp-btn">
+                        <button id="wa-order-btn" class="btn-order whatsapp-btn" style="border: none; cursor: pointer; font-family: inherit;">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                             Order via WhatsApp
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
         `;
+
+        // Add event listener for WhatsApp button
+        const waBtn = document.getElementById('wa-order-btn');
+        if (waBtn) {
+            waBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const qty = document.getElementById('wa-quantity').value || 1;
+                const address = document.getElementById('wa-address').value.trim();
+                
+                if (!address) {
+                    alert("Please enter a delivery address for WhatsApp orders.");
+                    return;
+                }
+                
+                const text = encodeURIComponent(`Hi, I would like to order from The 80 Club.\n\n*Item:* ${product.title}\n*Quantity:* ${qty}\n*Delivery Address:* ${address}`);
+                window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+            });
+        }
     } else {
         container.innerHTML = `
             <div style="padding: 3rem; text-align: center; width: 100%;">
