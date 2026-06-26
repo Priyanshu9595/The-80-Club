@@ -1,20 +1,20 @@
 const products = {
-    'avocado-toast': {
-        title: 'Gourmet Avocado Toast',
-        price: '₹250',
-        moreDesc: 'Our Gourmet Avocado Toast is crafted with locally sourced, organic avocados smashed to perfection. Served on a bed of freshly baked artisanal rustic sourdough bread, it is topped with a perfectly poached free-range egg, a sprinkle of Himalayan pink salt, and a dash of chili flakes for that extra kick. A healthy, conscious, and filling choice for any time of the day.',
+    'peri-paneer': {
+        title: 'Peri - Peri Paneer',
+        price: '₹219',
+        moreDesc: 'Zesty paneer cubes tossed in a fiery peri-peri glaze, served with crisp lettuce, seasoned beans, tomato salsa, and chat masala corn. Topped with crunchy tortilla strips, jalapeños, and black sesame seeds for a spicy, textured finish. Protein: [Mini - 25g, Reg - 35g] | Serves 1',
         img: 'assets/menu_1.png'
     },
-    'smoothie-bowl': {
-        title: 'Artisan Smoothie Bowl',
-        price: '₹300',
-        moreDesc: 'A refreshing and vibrant blend of mixed forest berries, acai, and oat milk, creating a thick, creamy base. It is beautifully topped with house-made granola, toasted coconut flakes, chia seeds, and fresh seasonal fruits. Packed with antioxidants and essential nutrients, this bowl is the ultimate clean energy booster for a conscious start.',
+    'chicken-tikka-sandwich': {
+        title: 'Smoked Chicken Tikka Sandwich',
+        price: '₹119',
+        moreDesc: 'Energy: 360 KCal. Protein: 15 Grams. Golden-charred brown bread stuffed with a creamy, vibrant chicken tikka mash and crunchy garden veggies. Bold, juicy, and perfectly grilled.',
         img: 'assets/menu_2.png'
     },
-    'chicken-wrap': {
-        title: 'Signature Chicken Wrap',
-        price: '₹280',
-        moreDesc: 'Tender, herb-marinated grilled chicken breast wrapped in a warm, freshly pressed whole wheat tortilla. Inside, you will find crisp romaine lettuce, organic cherry tomatoes, sliced cucumbers, and a drizzle of our special low-calorie yogurt-based dressing. A satisfying, protein-packed meal that does not compromise on taste.',
+    'chicken-popcorn': {
+        title: 'Peri - Peri Chicken Popcorn',
+        price: '₹149',
+        moreDesc: 'Bite-sized, juicy chicken chunks fried to a golden crisp and tossed in our signature fiery peri-peri seasoning. Served with a side of creamy dip, these spicy pops are the ultimate crunchy snack for any time of day. Protein: ~28g | Calories: ~290 kcal | Serves 1',
         img: 'assets/menu_3.png'
     },
     'quinoa-salad': {
@@ -59,10 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="product-price">${product.price}</div>
                 <p class="product-desc">${product.moreDesc}</p>
                 
+                <div class="product-location" style="margin-bottom: 2.5rem; padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 10px; font-size: 0.95rem; color: var(--color-text-light); line-height: 1.5;">
+                    <strong style="color: var(--color-text);">📍 Location:</strong> The 80 Club (Outlet: Gachibowli)<br>
+                    Shop No: 311 312, Floor: 2, BSR Residency, TNGO's Colony Phase 2, Gachibowli, Hyderabad, Telangana, India
+                </div>
+                
                 <div class="order-section">
                     <h4>Choose Delivery Partner</h4>
                     <div class="order-buttons">
-                        <a href="https://www.swiggy.com" target="_blank" class="btn-order swiggy-btn">
+                        <a href="https://www.swiggy.com/city/hyderabad/the-80-club-gachibowli-rest1299511" target="_blank" class="btn-order swiggy-btn">
                             Order on Swiggy
                         </a>
                         <a href="https://www.zomato.com" target="_blank" class="btn-order zomato-btn">
