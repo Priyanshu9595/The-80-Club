@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 const text = encodeURIComponent(`Hi, I would like to order from The 80 Club.\n\n*Item:* ${product.title}\n*Quantity:* ${qty}\n*Delivery Address:* ${address}`);
-                window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+                window.open(`https://wa.me/917462050039?text=${text}`, '_blank');
             });
         }
     } else {
