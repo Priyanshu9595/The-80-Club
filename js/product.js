@@ -59,8 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h1 class="product-title">${product.title}</h1>
                     <div class="product-price">${product.price}</div>
                     <p class="product-desc">${product.moreDesc}</p>
-                    
-                    <div class="product-location" style="margin-bottom: 2.5rem; padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 10px; font-size: 0.95rem; color: var(--color-text-light); line-height: 1.5;">
+                    <div class="product-location" style="padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 10px; font-size: 0.95rem; color: var(--color-text-light); line-height: 1.5;">
                         <strong style="color: var(--color-text);">📍 Location:</strong> The 80 Club (Outlet: Gachibowli)<br>
                         Shop No: 311 312, Floor: 2, BSR Residency, TNGO's Colony Phase 2, Gachibowli, Hyderabad, Telangana, India
                     </div>
