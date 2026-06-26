@@ -47,23 +47,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = encodeURIComponent(`Hi, I would like to order the ${product.title} from The 80 Club`);
 
         container.innerHTML = `
-            <div class="product-img-wrapper">
-                <img src="${product.img}" alt="${product.title}">
-            </div>
-            <div class="product-info-wrapper">
-                <a href="index.html#menu" class="back-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                    Back to Menu
-                </a>
-                <h1 class="product-title">${product.title}</h1>
-                <div class="product-price">${product.price}</div>
-                <p class="product-desc">${product.moreDesc}</p>
-                
-                <div class="product-location" style="margin-bottom: 2.5rem; padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 10px; font-size: 0.95rem; color: var(--color-text-light); line-height: 1.5;">
-                    <strong style="color: var(--color-text);">📍 Location:</strong> The 80 Club (Outlet: Gachibowli)<br>
-                    Shop No: 311 312, Floor: 2, BSR Residency, TNGO's Colony Phase 2, Gachibowli, Hyderabad, Telangana, India
+            <div class="product-top-section">
+                <div class="product-img-wrapper">
+                    <img src="${product.img}" alt="${product.title}">
                 </div>
-                
+                <div class="product-info-wrapper">
+                    <a href="index.html#menu" class="back-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        Back to Menu
+                    </a>
+                    <h1 class="product-title">${product.title}</h1>
+                    <div class="product-price">${product.price}</div>
+                    <p class="product-desc">${product.moreDesc}</p>
+                    
+                    <div class="product-location" style="margin-bottom: 2.5rem; padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 10px; font-size: 0.95rem; color: var(--color-text-light); line-height: 1.5;">
+                        <strong style="color: var(--color-text);">📍 Location:</strong> The 80 Club (Outlet: Gachibowli)<br>
+                        Shop No: 311 312, Floor: 2, BSR Residency, TNGO's Colony Phase 2, Gachibowli, Hyderabad, Telangana, India
+                    </div>
+                </div>
+            </div>
+            <div class="product-bottom-section">
                 <div class="order-section">
                     <h4 style="margin-bottom: 0.5rem;">Direct Order Details</h4>
                     <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
